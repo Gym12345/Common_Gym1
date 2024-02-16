@@ -2,6 +2,9 @@ package common_Gym;
 
 import java.util.Scanner;
 
+import ControlWind.ControlWind;
+import jun_package.temperControl;
+
 
 
 
@@ -16,7 +19,8 @@ public class MainClass  {
 			ControlPanelImpl dao = ControlPanelImpl.getInstance();
 			
 			Scanner scan=new Scanner(System.in);
-			
+			ControlWind cw=new ControlWind();
+			temperControl tc=new temperControl();
 			outerLoop:
 			while (true) {
 			
@@ -26,10 +30,10 @@ public class MainClass  {
 				switch(choice1) {
 				
 				case 1:
-					dao.ControlWind();
+					cw.sibal();
 					break;
 				case 2:
-					
+					tc.temper();
 					break;
 					
 				case 0:
